@@ -15,7 +15,7 @@ const PORT = 9000;
 const crypto = require('crypto');
 const SECRET_KEY = Buffer.from(process.env.AES_SECRET_KEY || 'u7%f@9KxZ1qR#3WmD5gL$2t8BvNpE!Aa', 'utf-8');
 const OTP_SECRET_KEY = 'u7%f@9KxZ1qR#3WmD5gL$2t8BvNpE!Aa'; 
-const { decryptaes } = require('./src/components/security/decryption');
+const { decryptaes } = require('./security/decryption');
 const { v4: uuidv4 } = require('uuid');
 const authMiddleware = async (req, res, next) => {
   const authHeader = req.headers.authorization;
